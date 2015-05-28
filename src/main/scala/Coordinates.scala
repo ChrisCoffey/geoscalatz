@@ -21,7 +21,7 @@ object  CoordinatesHash {
     val longs = ArrayBuffer(-180.0d, 180.0d)
 
     while(localHash.length < maxLen) {
-      val ch = hashBits.foldLeft((0, even))((acc, i) => {
+      val ch = hashBits.foldLeft((0, true))((acc, i) => {
         val (ch, even) = acc
         even match {
           case true =>
